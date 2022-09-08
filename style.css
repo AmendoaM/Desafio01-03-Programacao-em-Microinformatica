@@ -1,0 +1,52 @@
+body {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cabecalho {
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+
+.menu nav {
+    float: right;
+    margin: 30px;
+}
+
+.cabecalho ul {
+    list-style: none;
+    display: inline;
+    float: right;
+}
+
+.cabecalho li {
+    display: inline;
+    margin: 10px;
+}
+
+.img {
+     display: flex;
+     justify-content: center;
+     width: 600px;
+     height: 300px;
+     margin: 10px 15px 15px 10px;
+}
+
+.conteudo {
+    width: 900px;
+    margin: auto;
+}
+
+h1, h3, p {
+    text-align: left;
+}
+ol {
+    text-align: left;
+}
+
+.form {
+    text-align: start;
+}
