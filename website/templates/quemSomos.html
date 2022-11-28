@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Document</title>
-</head>
-<body background="../img/fundo2.jpeg">
-    
-    <div class="conteudo">
-        <div class="cabecalho">
-            <img src="../static/img/logo.png" alt="logo.png">
-            <ul>
-                <li> <a href="home">Home</li></a>
-                <li> <a href="quemSomos">Quem Somos</li></a>
-                <li> <a href="contato">Contato</li></a>
+{% extends "base.html" %}
 
-            </ul>
-            
-        </div>
+{% block content %}
+<body background="static/img/fundo2.jpeg">
     <h3>Quem somos</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam aut tempora doloribus mollitia laboriosam repellendus, quam officia, distinctio nesciunt dolorem natus blanditiis hic. Nam repudiandae cumque iusto illum consequuntur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam aut tempora doloribus mollitia laboriosam repellendus, quam officia, distinctio nesciunt dolorem natus blanditiis hic. Nam repudiandae cumque iusto illum consequuntur!</p>
 
@@ -38,8 +20,6 @@
       </p>
       <h4>Todos os direitos reservados</h4>
 
-    
-    
 </body>
+    {% endblock %}
     
-</html>

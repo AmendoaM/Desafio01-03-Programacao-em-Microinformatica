@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Document</title>
-</head>
-<body background="../img/fundo2.jpeg">
-    <div class="conteudo">
-        <div class="cabecalho">
-            <img src="../static/img/logo.png" alt="logo.png">
-            <ul>
-                <li> <a href="home">Home</li></a>
-                <li> <a href="quemSomos">Quem Somos</li></a>
-                <li> <a href="contato">Contato</li></a>
-            </ul>
-        </div>
+{% extends "base.html" %}
+
+{% block content %}
+
+   <body background="static/img/fundo2.jpeg">
+
         <h3>Entre em contato</h3>  
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, tempora expedita sapiente illum quidem, aut fugit perferendis rem adipisci modi facere animi doloribus ex voluptate veritatis facilis, earum similique tenetur!</p>
         <hr>
         <div class="form">
-            <form action="">
+            <form action="{{url_for('routes.contato')}}"method="POST">
                 <label for="email">Email:</label><br>
                 <input type="text" name="email" id="email">
                 <br>
@@ -35,6 +22,5 @@
         </div>
         <br><br><br>
         <h4>Todos os direitos reservados</h4>
-    </div>
-</body>
-</html>
+    </body>
+{% endblock %}
