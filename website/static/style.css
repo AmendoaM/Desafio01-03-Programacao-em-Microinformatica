@@ -52,3 +52,13 @@ ol {
 .pg{
     text-align: justify;
 }
+
+
+
+.tabela{
+    width: 100%;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
