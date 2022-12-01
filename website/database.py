@@ -41,15 +41,6 @@ def inserir_dados(email, assunto, descricao):
 def buscarInfo():
     db = connect_db()
     cursor = db.cursor()
-    cursor.execute("SELECT email FROM contato")
-    email = cursor.fetchall()
-
-    cursor.execute("SELECT assunto FROM contato")
-    assunto = cursor.fetchall()
-
-    cursor.execute("SELECT descricao FROM contato")
-    descricao = cursor.fetchall()
-
-    info = [email, assunto, descricao]
-    
+    cursor.execute("SELECT * FROM contato;")
+    info = cursor.fetchall()
     return info

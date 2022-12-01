@@ -8,20 +8,29 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, tempora expedita sapiente illum quidem, aut fugit perferendis rem adipisci modi facere animi doloribus ex voluptate veritatis facilis, earum similique tenetur!</p>
         <hr>
        
-        <table class="tabela">
-              <th>Email</th>
-              <th>Assunto</th>
-              <th>Descrição</th>
-            {% for i in range(num) %}
-            <tr>
-                <td>{{ email[i] }}</td>
-                <td>{{ assunto[i] }}</td>
-                <td>{{ descricao[i] }}</td>
-            </tr>
-            {% endfor %}
-         </table>
+        {% if info %}
+    <h1>Últimos emails recebidos:</h1>
 
-        <br><br><br>
+    <table class="tabela">
+        <tr>
+            <th>Email</th>
+            <th>Assunto</th>
+            <th>Descrição</th>
+        </tr>
+        {% for i in info %}
+        <tr>
+            <td> {{ i[0] }} </td>
+            <td> {{ i[1] }} </td>
+            <td> {{ i[2] }} </td>
+        </tr>
+        {% endfor %}
+
+    </table> 
+{% else %}
+    <h1>Ainda não recebemos nenhum email.</h1>
+{% endif %}
+     
+<br><br><br>
 
         <h4>Todos os direitos reservados</h4>
     </body>

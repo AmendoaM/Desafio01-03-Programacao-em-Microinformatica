@@ -26,13 +26,12 @@ def contato():
 def who():                  
     return render_template("quemSomos.html")
 
+
 @routes.route("/info")
 def info():
-    db_info = buscarInfo()
-    email = db_info[0]
-    assunto = db_info[1]
-    descricao = db_info[2]
-    num = len(email)
-    return render_template("info.html", email=email, assunto=assunto, descricao=descricao, num=num)
-
+    info = buscarInfo()
+    if len(info) > 0:
+        return render_template("info.html", info = buscarInfo())
+    else: 
+        return render_template("info.html")
 
